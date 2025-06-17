@@ -1,3 +1,4 @@
+//Using Ternary Operator
 const marks = 90;
 console.log( marks > 30 ? "Passes" : "Failed" );
 
