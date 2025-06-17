@@ -4,7 +4,7 @@ console.log( marks > 30 ? "Passes" : "Failed" );
 const results = marks < 20 ? "Work Hard 🤞" : marks < 40 ? "Keep Going 🎆 " : marks < 60 ? "Nice ♨️" : marks <= 70 ? "Suuuuuuperrrrr 🔥" : marks >= 90 ? "Massda 🌕" : "Rocking" ;
 console.log(results);
 
-
+//Using Loops
 let i = "" ;
 
 for (i = 1 ; i <= 100 ; i++) { 
