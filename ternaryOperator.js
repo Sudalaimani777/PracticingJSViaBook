@@ -5,7 +5,6 @@ const results = marks < 20 ? "Work Hard 🤞" : marks < 40 ? "Keep Going 🎆 " 
 console.log(results);
 
 
-
 let i = "" ;
 
 for (i = 1 ; i <= 100 ; i++) { 
