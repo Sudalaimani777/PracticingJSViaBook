@@ -113,3 +113,43 @@ for (let i = 1 ; i <= 100 ; i++) {
 
     }
 }
+
+
+//While Loop :-
+let  i= 0; //Declaration
+while (i <= 10) { //Conditon
+    console.log(i);
+    i++ //Increment or Decrement
+}
+
+//Do-While Loop :-
+let j = 0; //Declaraton
+do {
+    console.log(j); //Do the code once and check the conditon
+    j++
+    
+} while (j <= 20); //Condition
+
+//Exercise
+const numbers = (lesserThanFifty) => {
+    while (lesserThanFifty >= 50) {
+        alert("Enter the number lesser the 50");
+    }
+    if(lesserThanFifty < 50) {
+        alert("Number accepted")
+    }
+}
+
+number(7);
+
+//Try catch block :=
+const number = (value) => {
+    if (value > 100) {
+        console.log(`Big`)
+    }
+    else {
+        console.log(`False`)
+    }
+}
+number(60);
+ 
