@@ -5,3 +5,5 @@ import { lastChar, reverse, arr, pushValue, popvalue } from "./function.js"
 import { dice, myFavAnimeList, calculateCircle, arrItem } from "./object.js";
 import { task, submitBtn, arr} from "./todolist.js";
 import { heading, para } from "./dom.js";
+import {headTag,keyBoardEvent, inputField, button, heading } from "./event.js";
+
