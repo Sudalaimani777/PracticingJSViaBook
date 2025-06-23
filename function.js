@@ -27,3 +27,24 @@ pushValue("WaterMelon");
 popvalue();
 
 console.log(arr);
+
+//Function:-
+export function greet (name) { //name - Parameter
+     console.log(`Hello, ${name}`);
+ }
+//Calling the function :-
+greet("Sudalaimani"); //Arguement
+
+//Anonymous Function :-
+greets();
+
+const greets = () => {
+     console.log(typeof greets);
+    
+}
+
+const summa = function sum () {
+    console.log("hello");
+    
+}
+ summa();
