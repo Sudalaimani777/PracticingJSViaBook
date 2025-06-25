@@ -1,5 +1,5 @@
 //RestParameter :-
-//1
+//1 Shopping
 export const createShoppingList = (...listItems) => {
     console.log(`You have ${listItems.length}`);
 
@@ -10,7 +10,7 @@ export const createShoppingList = (...listItems) => {
 }
 createShoppingList("Apple", "Mango", "Orange", "Grapes", "Banana")
 
-//2
+//2 Hero
 export const hero = (heroTitle, ...heroes) => {
     console.log(`The team name is ${heroTitle}`);
 
