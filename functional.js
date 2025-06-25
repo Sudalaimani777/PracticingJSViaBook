@@ -28,11 +28,10 @@ export const fruitsList = (...fruits) => {
         console.log(`${i + 1} - ${fruits[i]}`);
     }
 };
-fruitsList("Apple", "Orange", "Grapes", "WaterMelon");
+fruitsList("Milk", "Water", "Whey Protien", "Chicken");
 
 //RecursiveFunction :-
 //1-Countdown :-
-
 export const countDown = (num) => {
     if (num === 0) {
         console.log(`Done!`);
