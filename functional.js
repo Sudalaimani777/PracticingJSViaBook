@@ -21,7 +21,7 @@ export const hero = (heroTitle, ...heroes) => {
 }
 hero("Straw Hats", "Lufffy", "Zoro", "Sanji");
 
-//3
+//3 Fruit
 export const fruitsList = (...fruits) => {
     console.log(`There are ${fruits.length} in the Basket`);
     for (let i = 0; i < fruits.length; i++) {
