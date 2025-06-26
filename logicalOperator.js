@@ -7,23 +7,24 @@ export const biology  =  96;
 export const result = maths > 85 && physics > 85  && chemistry > 85 ? `You are eligible for Engineering` : biology  > 80 && chemistry > 80 ? `You are eligible for Doctor` : `You are eligible to study polyTechnic` ;              
 console.log(result);
 
+//2
 export let name;
 console.log("Sudalaimani" ?? name);
 
+//3
 export const playerGuess = 3
 export const correctAnswer = 6
-
 export const message = playerGuess === correctAnswer ? `Correct` : `Wrong`;
 console.log(message);
 
-
+//4
 export const guess = playerGuess > correctAnswer ? `Too High` 
                     : playerGuess === correctAnswer ? `Exactly Right` 
                     : playerGuess < correctAnswer ? `Too Low` : `None`;
 console.log(guess);
 console.log(message);
 
-//Switch :-
+//5 - Switch :-
 export const selectItem = (item) => {
     let price = 0
   
@@ -49,9 +50,9 @@ export const selectItem = (item) => {
     }
     return `You selected ${item}. That will be $${price}`
 }
-
 console.log(selectItem('biscuits'))
 
+//6
 export const dreamHoliday = {
     destination: 'Austin, Texas',
     activity: 'visit the Tesla HQ',
@@ -59,7 +60,7 @@ export const dreamHoliday = {
     companion: 'Elon Musk'
 }
 
+//7
 export const {destination:place, accommodation, activity, companion} = dreamHoliday;
 console.log(place);
-
-// console.log(dreamHoliday.name);
+console.log(dreamHoliday.name);
