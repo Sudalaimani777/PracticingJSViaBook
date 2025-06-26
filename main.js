@@ -8,4 +8,4 @@ import { heading, para } from "./dom.js";
 import {headTag,keyBoardEvent, inputField, button, heading } from "./event.js";
 import { friuts, results, suits, values, deck, map, arrOfStr, strToUpper, spanners } from "./goingLoopyOverArrays.js";
 import { createShoppingList, hero, fruitsList, countDown, factorialLoop } from "./functional.js";
-import { logAnsTimer,logAnswer } from "./setTime.js";
+import { qOne, ans, qOneAns, message, setTime,logAnsTimer, logAnswer } from "./setTime.js";
