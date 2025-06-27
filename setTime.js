@@ -24,17 +24,17 @@ export const logAnsTimer = setTimeout(()=> {
 
 
 // //3
-// export const shutDown = (device) => {
-//     let secondsRemaining = 3;
-//     const setIntervel = setInterval(() => {
-//         if (secondsRemaining > 0) {
-//             console.log(`Your ${device} will shutdown in ${secondsRemaining}`);
-//             secondsRemaining--;
-//         }
-//         else {
-//             console.log(`Your ${device} will shutdown`);
-//             clearInterval(setIntervel);
-//         }
-//     }, 1000);
-// };
-// shutDown("IQOO Z9S");
+ export const shutDown = (device) => {
+     let secondsRemaining = 3;
+     const setIntervel = setInterval(() => {
+         if (secondsRemaining > 0) {
+             console.log(`Your ${device} will shutdown in ${secondsRemaining}`);
+             secondsRemaining--;
+         }
+         else {
+             console.log(`Your ${device} will shutdown`);
+             clearInterval(setIntervel);
+         }
+    }, 1000);
+};
+shutDown("IQOO Z9S");
