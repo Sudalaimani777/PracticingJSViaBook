@@ -67,20 +67,20 @@ console.log(dreamHoliday.name);
 
 
 /* Challenge 1: Let's say you're building Reddit. Only users that are either moderators or have reached a certain karma threshold are allowed to upvote. */
-const karma = 143;
-const isModerator = true;
+export const karma = 143;
+export const isModerator = true;
 
 // first use a ternary to set hasEnoughKarma to true if karma is above 100. If not, set it to false
-let hasEnoughKarma;
+export let hasEnoughKarma;
 hasEnoughKarma = karma > 100  ? true : false;
 //  set the value of canUpvote with short-circuiting (using hasEnoughKarma and isModerator)
-let canUpvote;
+export let canUpvote;
 canUpvote = hasEnoughKarma && isModerator;
 console.log("canUpvote:", canUpvote);
 
 /* Challenge 2: Let's say that only moderators who have enough karma are allowed to delete posts.  How would you set the canDelete variable */
 // set canDelete to true if both hasEnoughKarma and isModerator is true
-let canDelete;
+export let canDelete;
 canDelete = hasEnoughKarma && isModerator;
 console.log("canDelete:", canDelete);
 
