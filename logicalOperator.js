@@ -85,7 +85,7 @@ canDelete = hasEnoughKarma && isModerator;
 console.log("canDelete:", canDelete);
 
 // Challenge 3: what is the value of user? What if you switch the hasValidEmail variable to false? What if the response is empty?
-const response = "JohnDoe";
-const hasValidEmail = true;
-const user = hasValidEmail && (response && "guest");
+export const response = "JohnDoe";
+export const hasValidEmail = true;
+export const user = hasValidEmail && (response && "guest");
 console.log("user: ", user);
