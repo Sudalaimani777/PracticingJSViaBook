@@ -1,6 +1,7 @@
 import { stringsArray, filterMethod } from "./logic.js";
 import { marks, result, i} from "./ternaryOperator.js";
-import { maths,physics, chemistry, biology, result, name,playerGuess,correctAnswer,message, guess, selectItem, dreamHoliday, user, hasValidEmail, response } from "./logicalOperator.js";
+import { maths,physics, chemistry, biology, result, name,playerGuess,correctAnswer,message, guess, selectItem, dreamHoliday, user, hasValidEmail, response, isModerator, karma, hasEnoughKarma, canUpvote, canDelete} from "./logicalOperator.js";
+
 import { lastChar, reverse, arr, pushValue, popvalue } from "./function.js"
 import { dice, myFavAnimeList, calculateCircle, arrItem } from "./object.js";
 import { task, submitBtn, arr} from "./todolist.js";
