@@ -63,5 +63,23 @@ console.log(arrItem.item);
 console.log(arrItem.removeValue());
 console.log(arrItem.item);
 
-
+//Shallow Copying Objects :-
+//Original Obj :-
+export const family = {
+    role : "Mother",
+    age : 35,
+    isWorking : true,
+    typeofWorks : {
+        homeWork : "Cleaning",
+        officeWork : "Team Leader"
+    }
+};
+console.log(family);
+//Copied Obj :-
+export const role = {...family}
+role.role = "Father";
+console.log(role);
+role.typeofWorks.homeWork = "Summa";
+console.log(role);
+console.log(family);
 
