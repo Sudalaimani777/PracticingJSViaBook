@@ -83,3 +83,23 @@ role.typeofWorks.homeWork = "Summa";
 console.log(role);
 console.log(family);
 
+//Deep Copy :-
+//Original Object :-
+export const orgObject = {
+    userName : "Sudalaimani",
+    isStudent : true,
+    age : 21,
+    role : "ThandaSoru",
+    achievements : {
+        prices : "Second Rank in class 8th",
+        other : "Vera Yedhum Illa"
+    }
+}
+
+//Copied Obj :-
+export const deepCopy = JSON.parse(JSON.stringify(orgObject));
+console.log(deepCopy);
+
+deepCopy.achievements.prices = "First price";
+console.log(deepCopy.achievements.prices);
+console.log(orgObject.achievements.prices);
