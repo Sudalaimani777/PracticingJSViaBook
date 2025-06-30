@@ -48,3 +48,18 @@ const summa = function sum () {
     
 }
  summa();
+
+//Cosure :-
+
+export const outer = () => {
+    let count = 0
+     const inner = () => {
+         count += 5;
+         console.log(count);
+     }
+     return inner;
+}
+
+// export const closure = outer();
+// closure()
+// closure(); 
