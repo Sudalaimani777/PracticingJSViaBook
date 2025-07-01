@@ -60,7 +60,35 @@ export const outer = () => {
      return inner;
 }
 
+//CapsName
 export const capsName = user => `${user.charAt(0).toUpperCase()}${user.slice(1)}`; 
 console.log(capitalizeName("umanr"));
 
+//Bill
+export const bill = (amount, numOfPeople) => `Each person need to pay ${amount / numOfPeople}`
+console.log(bill(200, 4));
 
+// Stretch goal start
+export const countdown = (startingNumber, step) => {
+  let countFromNum = startingNumber + step;
+  return () => countFromNum -= step;
+}
+
+export const countingDown = countdown(20, 2);
+console.log(countingDown());
+console.log(countingDown());
+console.log(countingDown());
+
+//LikeCount :-
+export const handlelike = (count) => {
+  let likeCount = 0;
+  return () => {
+    likeCount += count;
+    return likeCount;
+  }
+}
+
+export const like = handlelike(1,1);
+console.log(like()); 
+console.log(like()); 
+console.log(like()); 
