@@ -60,6 +60,7 @@ export const outer = () => {
      return inner;
 }
 
-// export const closure = outer();
-// closure()
-// closure(); 
+export const capsName = user => `${user.charAt(0).toUpperCase()}${user.slice(1)}`; 
+console.log(capitalizeName("umanr"));
+
+
