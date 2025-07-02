@@ -14,17 +14,3 @@ import { createShoppingList, hero, fruitsList, countDown, factorialLoop } from "
 import { qOne, ans, qOneAns, message, setTime,logAnsTimer, logAnswer, shutDown } from "./setTime.js";
 import { dateSnapshot, year, errorMessage } from "./constructor.js";
 import { userNames, pop, push, sort, join, concatOne, concatTwo, concatThree, pushValue} from "./arr.js";
-
-//Task 1 :-
-const noOfPeople = Number(prompt(`How many people went to the restaurant?`));
-const billAmount = Number(prompt(`How much is the total bill?`));
-const billSharing = billAmount / noOfPeople ;
-const message = alert(`${billSharing.toFixed("2")}`);
-console.log(billAmount);
-
-//Task-2 :-
- const principalAmount= Number(prompt(`Enter the Principal Amount`));
- const intrest = Number(prompt(`Enter the Intrest`));
- const years = Number(prompt(`Enter the Years`));
- const intrestCalculator = (principalAmount * intrest * years) / 100;
- const simpleIntrest = alert(`The Simple Intrest is ${intrestCalculator}`);
