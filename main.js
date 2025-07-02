@@ -13,7 +13,7 @@ import { friuts, results, suits, values, deck, map, arrOfStr, strToUpper, spanne
 import { createShoppingList, hero, fruitsList, countDown, factorialLoop } from "./functional.js";
 import { qOne, ans, qOneAns, message, setTime,logAnsTimer, logAnswer, shutDown } from "./setTime.js";
 import { dateSnapshot, year, errorMessage } from "./constructor.js";
-
+// import { userNames, pop, push, sort, join, concatOne, concatTwo, concatThree, pushValue} from "./arr.js";
 
 //Task 1 :-
 const noOfPeople = Number(prompt(`How many people went to the restaurant?`));
