@@ -103,3 +103,89 @@ console.log(deepCopy);
 deepCopy.achievements.prices = "First price";
 console.log(deepCopy.achievements.prices);
 console.log(orgObject.achievements.prices);
+
+
+//Destructuring :-
+
+//1
+const color = 'green';
+const hexCode = '#0f0';
+
+const colors = {
+  'yellow Color': '#ff0',
+  blue: "#f00",
+  orange: "#f60"
+};
+colors[color] = hexCode;
+console.log(colors);
+
+//2
+const colors = {
+    "blue Color" : "#f00", 
+    "Green Color" : "#f60"
+}
+
+const findColor = key => colors[key];
+console.log(findColor("blue Color"));
+
+//3
+const user = {
+  name: "Reed",
+  userName: "Reedbarger",
+  email: "reed@gmail.com",
+  details: {
+    title: "Programmer"  
+  }  
+};
+
+
+const {details, email:eMail, details : {title : tit}} = user;
+console.log(details);
+console.log(eMail);
+console.log(tit)
+
+const greetUser = ( {userName : name, details : {title : UserReward}} ) => {
+    console.log(`The User name is ${name} and his reward is ${UserReward}`);
+}
+greetUser(user);
+
+
+// Challenge: The recommendations object contains a set of of nice places to visit in Brighton, UK,
+// organized by what you'd like to do (eat pancakes, drink coffee etc).
+
+// 1. Destructure the places to drink (coffee and beer) from recommendations
+// 2. Destructure the places to listen to music
+// 3. Write a function that takes the recommendations object as an argument and that
+//      a) Logs out the music venues in recommendations when invoked 
+//      b) Uses object descructuring to get the "traditional" and "jazz" keys from the argument
+
+const recommendations = {
+    pancakes: 'Nowhere Man',
+    riceBowls: 'Pompoko',
+    beer: 'The Craft Beer Co.',
+    coffee: 'Coffee Roasters',
+    small_plates: 'Venetian Plates',
+    music: { 
+        traditional: 'Fiddler\'s Elbow', 
+        jazz: 'The Paris House'
+    }
+}
+
+const palcesToDrink = ( {beer:alcoholic, coffee : nonAlcholic} ) => {
+    console.log(`The alcoholic is ${alcoholic} and the non-alcoholic is ${nonAlcholic}`)
+}
+palcesToDrink(recommendations);
+
+//2
+const placesToListenMusic = ( {music : {traditional : traditionalMusic, jazz : jazzMusic}} ) => {
+    console.log(`The traditional music for Brighton is ${traditionalMusic} and the UK's brst music is ${jazzMusic}`)
+}
+placesToListenMusic(recommendations);
+
+// 3. Write a function that takes the recommendations object as an argument and that
+//      a) Logs out the music venues in recommendations when invoked 
+//      b) Uses object descructuring to get the "traditional" and "jazz" keys from the argument
+const venue = ({music : {traditional : traditionalMusicPlace}, jazz : jazzMusicPlace}) => {
+    console.log(`Brighton -> ${traditionalMusicPlace} , UK -> ${jazzMusicPlace}`)
+}
+venue(recommendations);
