@@ -215,3 +215,13 @@ const greetUser = {
 };
 console.log(greetUser);
 console.log(greetUser.greeting("Sudalai"));
+
+//Accessing the Objects in the Function:-
+const userDet = {
+    userName : "Arun", 
+    userAge : 23
+};
+const userFunc = ( {userName:Name, userAge : Age} ) => {
+    console.log(`He is ${Name} and his age is ${Age}`)
+};
+userFunc(userDet);
