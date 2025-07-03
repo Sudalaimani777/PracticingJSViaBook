@@ -189,3 +189,20 @@ const venue = ({music : {traditional : traditionalMusicPlace}, jazz : jazzMusicP
     console.log(`Brighton -> ${traditionalMusicPlace} , UK -> ${jazzMusicPlace}`)
 }
 venue(recommendations);
+
+//Recalls :-
+const details = {
+    "User Name" : "Sudalaimani",
+    "Age" : 21,
+    "Address" : {
+        DoorNo : "19 / 4"
+    }
+};
+const deepCopy = JSON.parse(JSON.stringify(details));
+console.log(deepCopy);
+deepCopy["User Name"] = "Kumar";
+console.log(`The deepCopy is -> ${deepCopy["User Name"]}`);
+console.log(`The Original is -> ${details["User Name"]}`);
+
+const {Address : {DoorNo : DoorAddress}} = details;
+console.log(`The door number of the user is ${DoorAddress}`);
