@@ -225,3 +225,19 @@ const userFunc = ( {userName:Name, userAge : Age} ) => {
     console.log(`He is ${Name} and his age is ${Age}`)
 };
 userFunc(userDet);
+
+
+// 4th Lecture
+// ShortHand Property :-
+const shortObj = (personAge, personStatus) => {
+  return  {
+        personAge,
+        personStatus
+    }
+}
+const personOne = shortObj(50, "Single")
+console.log(personOne);
+//Variables converted into an object :-
+const student = "Sudalaimani";
+const studies = "UG";
+console.log({student, studies});
