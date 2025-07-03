@@ -206,3 +206,12 @@ console.log(`The Original is -> ${details["User Name"]}`);
 
 const {Address : {DoorNo : DoorAddress}} = details;
 console.log(`The door number of the user is ${DoorAddress}`);
+
+// Function Inside the Object :-
+const greetUser = {
+    greeting  : (user) => {
+        console.log(`Hello ${user}`)
+    }
+};
+console.log(greetUser);
+console.log(greetUser.greeting("Sudalai"));
