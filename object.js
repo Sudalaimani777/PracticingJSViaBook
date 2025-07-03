@@ -240,4 +240,29 @@ console.log(personOne);
 //Variables converted into an object :-
 const student = "Sudalaimani";
 const studies = "UG";
-console.log({student, studies});
+console.log({student, studies}); //Accessing the variables  in to make the Object.
+
+
+// Challenge: 
+// 1. Take the object (contains a favourite place in Brighton, UK), and turn it into a Map
+// 2. Add a boolean property 'visited', to indicate places that you've been to it
+// 3. Add an integer property 'averageBill' with how much you spend there on average
+// 4. Fetch one of the properties using the get() method
+
+const favouritePlace = {
+    music: "jazz",
+    name: "Paris House"
+};
+
+const myMap = new Map([
+    ["favPlaceOne", "UK"],
+    ["favPlaceTwo", "Brighton"],
+    ["visited", false],
+    ["averageBill", 10000]
+]);
+console.log(myMap);
+
+const visited = myMap.get("visited");
+const favPalce = myMap.get("favPlaceOne");
+console.log(favPalce)
+console.log(visited);
