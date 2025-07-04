@@ -307,3 +307,14 @@ console.log(personThree);
 personThree.name = "Sudalai";
 console.log("Copied Person Three", personThree);
 console.log("Original PersonDetails", personDetails);
+
+//Optional Chaining :-
+const userInfo  ={
+     name : "Sudalai",
+     address : {
+        doorNumber : "19/4", 
+        street  : "Ranasurnayakkanpatti", 
+        state : "Tamil Nadu"
+     }
+}
+console.log(userInfo.address.street);
