@@ -266,3 +266,44 @@ const visited = myMap.get("visited");
 const favPalce = myMap.get("favPlaceOne");
 console.log(favPalce)
 console.log(visited);
+
+
+//In is used  to check the property which is present in or not :-
+const newObj = {
+    "User Name" : "Jhon Doe",
+    "is Working" : true
+}
+const checkRes = "User Name" in newObj;
+console.log(checkRes);
+//Using the Loop :-
+for (let items  in newObj) {
+    console.log(items, newObj[items]);
+}
+
+//Shallow Copy :- (GfG) :-
+const personDetails = {
+    name : "Jhon",
+    add : "19/4"
+}
+console.log(personDetails);
+
+const personOne = personDetails;
+console.log(personOne);
+personOne.add = "20";
+console.log("Modified value", personOne.add);
+console.log("Original Obj", personDetails.add);
+
+//Deep Copy :-
+
+const persoNTwo = {...personDetails};
+persoNTwo.add = "30";
+console.log("Deep Copied", persoNTwo.add);
+console.log("Original", personDetails.add);
+
+//Object.assign :- //Not making a reference of the Object, 
+// still it is not a  deepcopy :-
+const personThree = Object.assign({}, personDetails);
+console.log(personThree);
+personThree.name = "Sudalai";
+console.log("Copied Person Three", personThree);
+console.log("Original PersonDetails", personDetails);
