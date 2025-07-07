@@ -177,7 +177,6 @@ const cars = [
   { name: "Tesla", isElectric: true, weight: 1750 },
   { name: "BMW", isElectric: true, weight: 1350 },  
 ];
-
 const electricCar = cars.reduce( (acc, car) => {
    if(car.isElectric) {
       return "The Sum of electric car is", acc + car.weight
