@@ -186,3 +186,196 @@ const electricCar = cars.reduce( (acc, car) => {
    }
 }, 0);
 console.log(electricCar);
+
+// Challenge: 
+// 1. Take the object (contains a favourite place in Brighton, UK), and turn it into a Map
+// 2. Add a boolean property 'visited', to indicate places that you've been to it
+// 3. Add an integer property 'averageBill' with how much you spend there on average
+// 4. Fetch one of the properties using the get() method
+
+const favouritePlace = {
+    music: "jazz",
+    name: "Paris House"
+};
+
+//-----------------------------------------------------
+const myMap = new Map([
+    ["favPlaceOne", "UK"],
+    ["favPlaceTwo", "Brighton"],
+    ["visited", false],
+    ["averageBill", 10000]
+]);
+console.log(myMap);
+
+const visited = myMap.get("visited");
+const favPalce = myMap.get("favPlaceOne");
+console.log(favPalce)
+console.log(visited);
+
+Scrimba Array One
+const todos = [];
+
+const todo1 = {
+  text: 'Wash the dishes',
+  complete: false  
+};
+
+const todo2 = {
+  text: 'Do laundry',
+  complete: false  
+};
+
+todos.push(todo1, todo2);
+todos.pop();
+todos[1] = todo2;
+todos[0] = todo1;
+console.log(todos);
+
+const one = [];
+const two = {
+  name : "Sudalai",
+  age :20
+}
+const three = {
+  name : "Guru",
+  age : 20
+}
+one.push(two, three);
+console.log(one)
+console.log(one.pop())
+console.log(one)
+
+// Challenge: 
+// 1. Create an array - favouriteSongs[] -  and add your 3 favourite songs using push()
+// 2. Log out the last song in the array, and make it so that your solution will log out the last one regardless of how many items there are in the array
+// 3. Invoke the pop method on your created array. What values do you have left in the array? 
+
+// const favSongs = [];
+// favSongs.push("Neethanae");
+// favSongs.push("Mersal Arasan");
+// favSongs.push("Nee kavithaigala");
+// favSongs.push("Somewhere Only We Know");
+// console.log(favSongs)//1
+// console.log(favSongs[favSongs.length - 1]);//2
+// console.log(favSongs.pop())//3
+
+//FrontEnd Master 8/7/2025
+//Creating an Object:-
+const myDetails = {
+  name: "K.Sudalaimani",
+  age: 21,
+  status: "College Student",
+  membersInFamily: 5,
+  committed: false,
+  address: {
+    doorNumber: "19/4",
+    streetName: "Nadar Street",
+    city: "Ettaiyapuram"
+  },
+  vehicle: "Cycle",
+  hobbies: ["Drawing", "Coding", "Watching Anime", "Eat", "Sleep"]
+}
+console.log(myDetails);
+console.log(myDetails.hobbies.length)
+
+
+const mani = {...myDetails}
+console.log("Spread Operator", mani );
+// console.log("Rest Operator", sud);
+
+
+//Scrimba 8/7/25
+//Reduce Method :-
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+const addNum = numbers.reduce((acc, sum)=> {
+   acc.push(sum * 2); 
+   return acc
+},[])
+console.log(addNum);
+
+//Map Method:-
+const mapMethod = numbers.map((num)=> {
+    return num * 2
+})
+console.log(mapMethod) 
+
+//2:-
+const reduceGreater = numbers.reduce((acc, greater) => {
+    if (greater > 3) {
+        acc.push(greater)
+    }
+    return acc
+}, []);
+console.log(reduceGreater);
+//USing Ternary Operator :-
+const oneMore = numbers.reduce((acc, num) => {
+    const res  = num > 3 ? acc.concat(num) : acc;
+    return res;
+}, [])
+console.log("Try", oneMore);
+
+//Map Method :-
+const mapGreat = numbers.map(greaterThanThree => {
+    if (greaterThanThree > 3) {
+        console.log(greaterThanThree)
+    }
+});
+
+//Filter:-
+const filterMethod = numbers.filter(num => num > 3);
+console.log(filterMethod);
+
+//Rest and Spread Operator :-
+//1:-
+const lunchMenuIdeas = ['Harvest Salad', 'Southern Fried Chicken', "Fried Rice"];
+const allMenuIdeas = [...lunchMenuIdeas];
+allMenuIdeas.push('Club Sandwich');
+console.log(allMenuIdeas);
+
+const tamilFoods = [...lunchMenuIdeas];
+console.log("Tamil Foods",tamilFoods);
+tamilFoods.push("Biriyani");
+
+const [morning, afternoon, ...dinner] = tamilFoods;
+console.log("The Dinner menu are ", dinner);
+
+//2
+const finalMenuItems = [
+  "American Cheeseburger",
+  "Southern Fried Chicken",
+  "Glazed Salmon"
+];
+const [one,...two]= finalMenuItems;
+console.log(two);
+
+//Swapping :-
+const swappingMenuItems = [
+  "American Cheeseburger",
+  "Southern Fried Chicken"
+];
+let [firstDish, secondDish] = swappingMenuItems;
+console.log(`Before`, {firstDish}, {secondDish})
+[secondDish, firstDish] = [firstDish, secondDish];
+console.log("After", {firstDish}, {secondDish})
+
+// Challenge: 
+// In our restaurant, the chef has some favourite dishes in two different categories.
+// The chef loves all dishes that start with "S", while the rest are regular dishes
+// Use array destructoring to create arrays of the chefs favourite dishes of meat and
+// fish, and to create arrays of the regular meat and fish dishes
+
+const fishDishes = ['Salmon Rillettes', 'Grilled Tuna Provencal', 'Fish and Chips']
+const meatDishes = ['Lasagna', 'Spaghetti', 'Satay Chicken Skewers']
+
+// Modify these four variables first
+//Fish Dish :-
+const [chefFavFishDishes, ...chefRegularFishDishes] = fishDishes;
+console.log({chefFavFishDishes}, {chefRegularFishDishes});
+//Meat Dish :-
+const [chefRegularMeatDishes,...chefFavMeatDish] = meatDishes;
+console.log({chefFavMeatDish}, {chefRegularMeatDishes});
+// Finally, use the spread operator to create these two arrays as well
+const chefsDishes = [chefFavFishDishes, ...chefFavMeatDish];
+console.log("Chef Fav Dishes", {chefsDishes});
+const regularDishes = [...chefRegularFishDishes,chefRegularMeatDishes];
+console.log("Regular Dish", {regularDishes});
