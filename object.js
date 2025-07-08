@@ -318,3 +318,19 @@ const userInfo  ={
      }
 }
 console.log(userInfo.address.street);
+
+//Other Method :-
+const {add : {doorNo : Door}} = obj;
+console.log(Door)
+
+const favAnime = {
+  action : {
+    animeOne : "Naruto",
+    type : {
+      category : ["Action", "Comedy"]
+    }
+  }
+}
+
+const {action :{type : {category : cat}}} = favAnime;
+console.log(cat);
