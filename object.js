@@ -334,3 +334,35 @@ const favAnime = {
 
 const {action :{type : {category : cat}}} = favAnime;
 console.log(cat);
+
+
+//Challenge :- 08/07/2025
+//Frontend Masters :-
+const spiceGirls = {
+  albums  : ["Spice", "Spice World", "Forever"],
+  motto : "Girl Power",
+  members : {
+    personOne : {
+      name : "Emma",
+      nickName : "Baby"
+    },
+    personTwo : {
+      name : "Geri",
+      nickName : "Ginger"
+    },
+    personThree :{
+      name : "Mel B",
+      nickName : "Scary"
+    }
+  }
+}
+//i)
+const {motto} = spiceGirls;
+console.log(motto);
+//ii)
+const {albums} = spiceGirls;
+console.log(albums[1]);
+
+//iii)
+const {members : {personTwo:ginger}} = spiceGirls;
+console.log([ginger]);
