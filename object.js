@@ -366,3 +366,25 @@ console.log(albums[1]);
 //iii)
 const {members : {personTwo:ginger}} = spiceGirls;
 console.log([ginger]);
+
+//9/7/25 - GFG (1st leature)
+const details = {
+    name : "K.Sudaliamani",
+    age : 21,
+    status : "Student"
+}
+
+const objKeys = Object.keys(details);
+console.log(`The object Keys are`,objKeys);
+
+const objValues = Object.values(details);
+console.log(`The values of the details object are`, objValues);
+
+//(2nd Leature) :- (this)
+const user = {
+    name : "Mani",
+    greet : function () {
+        console.log("Hello", this.name)
+    }
+}
+user.greet();
