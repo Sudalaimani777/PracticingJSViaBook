@@ -388,3 +388,62 @@ const user = {
     }
 }
 user.greet();
+
+//10/7/2025 :- scrimba
+//Iterating over the objects:-
+const obj = { one: 1, two: 2 };
+for (const key in obj) {
+  console.log('value', obj[key]);
+}
+
+const name = {
+  nameOne: `K.Sudalaimani`,
+  nameTwo : `Arun`,
+  nameThree : `Rajesh`
+}
+
+//FOr accessing the Values in the object :-
+for (const values in name) {
+  console.log("The Values in the object are ->", name[values]);
+}
+//For Accessing the Keys in the Object :-
+for (const keys in name) {
+  console.log(`The Keys in the object name are ->`, keys);
+}
+
+/*
+i) Object.keys() -> Used to access the keys in the object and stores in a array.
+ii) Object.values() -> Used to access the values in the object and stores them in the array.
+iii) Object.entries() -> Access both keys and values and stored in a array.
+*/
+const objKEys = Object.keys(name);
+console.log(objKEys);
+
+//Example :-
+const user = {
+  name: 'John',
+  age: 29  
+};
+
+const objKeys = Object.keys(user);
+console.log(`The keys in the object are ->`, objKeys);
+
+const objValues = Object.values(user);
+console.log(`The values in the Object are ->`, objValues);
+
+const objEntries = Object.entries(user);
+console.log(`The entries in the object are -> `, objEntries);
+
+//Challenge :-
+const monthlyExpenses = {
+  food: 400,
+  rent: 1700,
+  insurance: 550,
+  internet: 49,
+  phone: 95  
+};
+//Find the sum of total expenses :-
+const totalExpenses = Object.values(monthlyExpenses).reduce((acc, expenses) => {
+  return acc + sum;
+}, 0);
+console.log(`The total expenses in a month is ->`, totalExpenses);
