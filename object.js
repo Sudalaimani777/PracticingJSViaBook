@@ -462,3 +462,53 @@ function User (name, age) { //-> Capital Letter name
 }; 
 const userOne = new User("Sudalaimani",21) //-> new keyWord
 console.log(userOne);
+
+//2)Function Borrowing (or) Explicit Binding - call, Apply and Bind :-
+
+const firstUser = {
+  name :'K.Sudalaimani',
+  syHi () { // -> Implicit Binding (Function individual to its own object)
+    console.log(`Hello ${this.name}`)
+  }
+}
+firstUser.syHi();
+
+const secondUser = {
+  name :'Guru',
+  syHi () {
+    console.log(`Hello ${this.name}`)
+  }
+}
+secondUser.syHi();
+
+const thirdUser = {
+  name :'Mugesh',
+  syHi () {
+    console.log(`Hello ${this.name}`)
+  }
+}
+thirdUser.syHi();
+const mess = thirdUser.name
+const disp = document.createElement("div");
+disp.textContent =  mess;
+console.log(disp)
+document.body.appendChild(disp)
+
+
+//"Call function method only work in the normal function, it doesn't work in ES6 functions"
+//UseCase -> When the objects are using the same functions, in that situation we can use the call
+const userName = {
+  name :"K.Sudalaimani"
+}
+
+const userTwo = {
+  name:"Guru"
+}
+
+function func (degree, yearOfGraduation) {
+  console.log(`The student name is ${this.name} and he is studying ${degree} and the graduation year is ${yearOfGraduation}`);
+}
+func.call(userName, "BE", 2026); // The value of this is userName
+//op -> The student name is K.Sudalaimani and he is studying  BE and the graduation year is 2026.
+
+func.apply(userTwo,["BE-AI", 2026]) //-> Passes the arguments in the form of arrays
