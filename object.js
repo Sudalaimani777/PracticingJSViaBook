@@ -447,3 +447,18 @@ const totalExpenses = Object.values(monthlyExpenses).reduce((acc, expenses) => {
   return acc + sum;
 }, 0);
 console.log(`The total expenses in a month is ->`, totalExpenses);
+
+//11/07/2025 :- GfG
+//1) new keyword and constructor function :-
+/*
+Constructor functions are regular functions.
+  i)They have "2 conventions through they named with capital  letter first".
+  ii)They must start with the "new" operator.
+ */
+
+function User (name, age) { //-> Capital Letter name
+  this.name = name,
+  this.age = age
+}; 
+const userOne = new User("Sudalaimani",21) //-> new keyWord
+console.log(userOne);
