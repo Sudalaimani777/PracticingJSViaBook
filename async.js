@@ -48,7 +48,6 @@
 // //Third console :-
 // console.log(`The third line after the add Event listener`);
 
-
 //callback hell :-
 //bookHotel -> proceedToPay -> showBookingStatus -> updateBookingHistory (API's) 
 
