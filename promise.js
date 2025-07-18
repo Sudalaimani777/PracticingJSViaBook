@@ -28,3 +28,7 @@ promise.then( response => response.json()).then(responseData => console.log(resp
 //Try 3 :-
 const promises  = fetch(URL);
 promises.then( urlResponse => urlResponse.json()).then(responseData => console.log(responseData)).catch( e => console.log(`The Error is ${e}`)).finally(results => console.log(`The result is ${results}`));
+
+//Try 4 :-
+
+const promiseFinally = fetch(URL).then(res => res.json()).then(resData => console.log(resData)).catch(e => console.log(`The error is ${e}`)).finally((alwaysResponded = "the output") => console.log(`Anyways the finally block will execute ${alwaysResponded}`))
