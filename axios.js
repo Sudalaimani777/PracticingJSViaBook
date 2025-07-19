@@ -272,3 +272,78 @@ const productCustomHeader = () => {
         .catch(productResponseError => console.error(`The Error is ${productResponseError}`))
 }
 productCustomHeader();
+
+
+//TRANSFORMING REQUESTS AND RESPONSE :-
+const transformResponse = () => {
+    const options = {
+        method : "post",
+        url: "https://jsonplaceholder.typicode.com/todos",
+        data : {
+            title : `Hello World`
+        },
+        transformResponse : axios.default.transformResponse.concat(data => {
+            data.title = data.title.toUppercase();
+            return data;
+        })
+    }
+
+    const method = axios(options).then(tRes => console.log(tRes)).catch(tResError => console.log(`The Error is ${tResError}`))
+}
+transformResponse();
+
+//ERROR HANDLING :-
+/*
+1)Response - err.data, err.status, err.headers
+2)Request - err.request, err.message
+*/
+//1
+const errorHandlingMethod = () => {
+    const methodGet = axios.get("https://dummyjson.com/products")
+        .then(getResponse => {
+            console.log(getResponse);
+            return getResponse
+        })
+        .catch(getError => {
+            if (getError.response) {
+                //SERVER RESPONDED WITH A STATUS OTHER THAN 200 RANGE
+                console.log(getError.response.data);
+                console.log(getError.response.status);
+                console.log(getError.response.headers);
+                ///Nested If
+                if (getError.response.status === 404) {
+                    alert(`Error: Page Not Found`);
+                }
+            } else if (getError.request) {
+                //Request was made but no response
+                console.log(getError.request);
+            } else {
+                console.log(getError.message);
+            }
+        })
+}
+errorHandlingMethod();
+
+//ERROR HANDLING TRY 2 :-
+const errorHandlingMethodTryTwo = () => {
+    const getError = axios.get("https://dummyjson.com/prducts")
+        .then(getRes => {
+            console.log(getRes);
+        })
+        .catch(getErr => {
+            if (getErr.response) {
+                console.log(getErr.response.data);
+                console.log(getErr.response.status);
+                console.log(getErr.response.headers);
+                //Nested If Statement :-
+                if (getErr.response.status === 404) {
+                    alert(`Error : 404 Page Not Found`);
+                }
+            } else if (getErr.request) {
+                console.log(getErr.request);
+            } else {
+                console.log(getErr.request.message);
+            }
+        })
+}
+errorHandlingMethodTryTwo();
