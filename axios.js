@@ -347,3 +347,31 @@ const errorHandlingMethodTryTwo = () => {
         })
 }
 errorHandlingMethodTryTwo();
+
+//IMPLEMENTING THE ERROR HANDLING IN THE PRODUCT API :-
+const productError = (index) =>  {
+    const getAPI = axios.get("https://dummyjson.com/products")
+                .then(getRes => {
+                    const para = document.createElement("div");
+                    para.textContent = `The Product id is ${ getRes.data.products[index].id} and the title of the product is ${ getRes.data.products[index].title}`;
+                    console.log(getRes.data.products[index])
+                    document.body.appendChild(para);
+                })
+                .catch(getErr => {
+                    if (getErr.response) {
+                        console.log(getErr.response.data);
+                        console.log(getErr.response.status);
+                        console.log(getErr.response.headers);
+
+                        //Nested If Statement :-
+                        if (getErr.response.status === 404) {
+                            alert (`Error Occurred 404 Page Not Found`);
+                        }
+                    }else if (getErr.request) {
+                        console.log (getErr.request);
+                    }else {
+                        console.log(getErr.message);
+                    }
+                })
+}
+productError(8);
