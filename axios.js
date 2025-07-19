@@ -1,5 +1,7 @@
-axios.get(`https://jsonplaceholder.typicode.com/todos`).then(response => console.log(response)).catch(e => console.log(`The error is ${e}`)).finally(result => console.log(`Anyways`))
+//AXIOS GLOBAL :-
+const globalAxios = axios.defaults.headers.common["X-Auth-Token"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30";
 
+axios.get(`https://jsonplaceholder.typicode.com/todos`).then(response => console.log(response)).catch(e => console.log(`The error is ${e}`)).finally(result => console.log(`Anyways`))
 
 // Method One for "GET" :-
 const getMethod = () => {
