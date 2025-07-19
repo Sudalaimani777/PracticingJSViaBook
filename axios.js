@@ -354,7 +354,8 @@ const productError = (index) =>  {
                 .then(getRes => {
                     const para = document.createElement("div");
                     para.textContent = `The Product id is ${ getRes.data.products[index].id} and the title of the product is ${ getRes.data.products[index].title}`;
-                    console.log(getRes.data.products[index])
+                    console.log(getRes.data.products[index]);
+                    console.log(getRes);
                     document.body.appendChild(para);
                 })
                 .catch(getErr => {
