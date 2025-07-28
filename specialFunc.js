@@ -72,3 +72,50 @@ const assignFuncToTheVariable = function () {
     console.log("Hello");
 };
 assignFuncToTheVariable();
+
+//Higher Order Function :-
+/**
+ * 1)Takes an another function as an argument.
+ * 2)Return the another function as a result.
+ */
+
+const greetMessage = () => {
+    return "Good Morning";
+};
+
+const higherOrderFunc = (inner) => {
+    let message = inner()
+    console.log("Mani", message);
+};
+// higherOrderFunc(greetMessage);
+
+const displayMessage = () => {
+    return  () => {
+        console.log("Inner Func");
+    }
+};
+const res = displayMessage();
+// res();
+
+//Example :-
+const num  = [1, 2, 3, 4];
+
+const squareNum = (number) => {
+    const squareNumContainer = [];
+    for (let numbers of number) {
+        squareNumContainer.push(numbers ** 2);
+    };
+    return squareNumContainer;
+}
+const output = squareNum(num);
+console.log("Square ->", output);
+
+const cubeNum = (num) => {
+    const cubeNumContainer = [];
+    for (let cubeNum of num){
+        cubeNumContainer.push(cubeNum ** 3);
+    };
+    return cubeNumContainer;
+};
+const cubeNumOutput = cubeNum(num);
+console.log("Cube ->", cubeNumOutput);
