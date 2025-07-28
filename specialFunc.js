@@ -35,3 +35,40 @@ const appendArr = (arr) => {
     return newArr;
 }
 appendArr([1, 2, 3]);
+
+//First Class Function :-
+/**
+ * The functions are treated like any other variable or data type
+ * A func can be passed as a argument to an other function
+ */
+
+//1 Passing the function as a argument
+const myFunc = () => {
+     return "This is the first class function" ;
+}
+
+const greet = (inner, name) => {
+    let message= inner();
+    console.log(message);
+    console.log(message, name);
+};
+greet(myFunc, "Kumar") //Taking the function as an argument "myFunc"
+
+//Returning the Function :-
+const retFunc = () => {
+    const innerFunc = () => {
+        let name = "Kumar";
+        console.log(name, "Welcome");
+    };
+    return innerFunc;
+};
+
+const res = retFunc();
+res()
+
+
+//3) Assign a function in the variable :-
+const assignFuncToTheVariable = function () {
+    console.log("Hello");
+};
+assignFuncToTheVariable();
