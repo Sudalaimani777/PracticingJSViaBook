@@ -8,7 +8,6 @@ export const checkPalindrome = () => {
 }
 checkPalindrome();
 
-
 //Spread in Arrays :- Spread -> Right Side , Rest -> Left Side.
 export const arrOne = [1, 2, 3, 4];
 export const arr22 = [3, 4, 5]
