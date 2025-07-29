@@ -119,3 +119,58 @@ const cubeNum = (num) => {
 };
 const cubeNumOutput = cubeNum(num);
 console.log("Cube ->", cubeNumOutput);
+
+
+//Recursion :-
+//Function which is called by itself is known as "Recursion"
+ const calcSum = (num) => {
+    let total = 0
+    for(let i = 0; i <= num ; i++) {
+        total += i;
+        // console.log(total);
+    }
+    return total;
+ }
+ const res = calcSum(10);
+ console.log(res);
+
+ //Recursive Func :-
+const recursiveFunc = (number) => {
+    if (number === 1) {
+        return number
+    }
+    return number + recursiveFunc(number - 1);
+}
+const result = recursiveFunc(10);
+console.log(result );
+
+
+const factorialNumber = (num) => {
+    if(num === 1){
+        return num;
+    }
+    return num * factorialNumber(num - 1);
+};
+const value = factorialNumber(5);
+console.log(value);
+
+
+const recursive= (number) => {
+    if (number === 1){
+        return number;
+    }
+    return number + recursive(number - 1);
+};
+
+const out = recursive(10);
+console.log(out);
+
+const factorial = (num) => {
+    if(num === 1){
+        return num;
+    }
+    return num * factorial(num - 1);
+};
+
+const facOutput = factorial(20);
+console.log(facOutput);
