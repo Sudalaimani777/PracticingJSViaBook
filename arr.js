@@ -44,6 +44,7 @@ console.log(`Updated array four ${arr4}`);
  console.log(userNames.includes("M"));
  console.log(userNames.includes("z"));
 
+
  //Pop() :- Removes the last item
  export const pop = [1, 2, 3, 4];
  console.log(pop.pop());
